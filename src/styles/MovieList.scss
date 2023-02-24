@@ -1,0 +1,21 @@
+.movie-list-container {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// .movie-list-container::-webkit-scrollbar {
+//     display: none;
+//   }
+
+.movie-list-item {
+  display: flex;
+  margin-right: 1rem;
+  width: 300px;
+  height: 430px;
+  transition: transform 0.3s ease-in-out;
+
+  img {
+    border-radius: 20px;
+  }
+}
