@@ -3,8 +3,8 @@
   justify-content: center;
   margin: 1rem 0;
 
-  input {
-    background-color: var(--gray-color);
+  input[type="text"] {
+    background-color: var(--darkGray-color);
     color: var(--white-color);
     width: 100%;
     max-width: 500px;
@@ -13,5 +13,6 @@
     border-radius: 50px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     outline: none;
+    
   }
 }

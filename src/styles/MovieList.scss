@@ -2,6 +2,8 @@
   display: flex;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+
+  padding: 1rem 0.5rem;
 }
 
 // .movie-list-container::-webkit-scrollbar {
@@ -11,11 +13,50 @@
 .movie-list-item {
   display: flex;
   margin-right: 1rem;
-  width: 300px;
-  height: 430px;
   transition: transform 0.3s ease-in-out;
 
   img {
+    --img-width: 13.125rem;
+    --img-height: 18.9rem;
     border-radius: 20px;
+    width: var(--img-width);
+    height: var(--img-height);
+
+    @media screen and (min-width: 768px) {
+      width: calc(var(--img-width) * 1.5);
+      height: calc(var(--img-height) * 1.5);
+    }
   }
+
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+
+    .overlay-info {
+      opacity: 1;
+    }
+  }
+}
+.overlay-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 6rem;
+  width: 100%;
+  color: var(--white-color);
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }

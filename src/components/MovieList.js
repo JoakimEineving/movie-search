@@ -1,16 +1,25 @@
 import React from "react";
-import "../styles/MovieList.scss"
-
-
+import "../styles/MovieList.scss";
+import { Link } from "react-router-dom";
 
 const MovieList = (props) => {
-    
+
+  if (!props.movies) {
+    return <div></div>;
+  }
   return (
     <div className="movie-list-container">
       {props.movies.map((movie, index) => (
-          <div key={index} className="movie-list-item">
-        <img src={movie.Poster} alt="movie" />
-      </div>
+        
+          <Link to={`/movie/${movie.imdbID}`}>
+        <div key={index} className="movie-list-item">
+            <img src={movie.Poster} alt="movie" />
+            <div className="overlay-info">
+              <h3>{movie.Title}</h3>
+              <p>{movie.Year}</p>
+            </div>
+          </div>
+        </Link>
       ))}
     </div>
   );
