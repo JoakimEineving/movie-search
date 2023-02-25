@@ -1,29 +1,31 @@
 import React, { useState, useEffect } from "react";
 import "../styles/MovieDetails.scss";
-//font awesome fa-arrow-left
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate, useParams } from "react-router-dom";
-import {getMovie} from "../api/api";
+import { getMovie } from "../api/api";
+import ExploreMore from "../components/ExploreMore";
 
 const MovieDetails = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleBack = () => {
-    navigate("/")
+    navigate("/");
   };
-  const [movie, setMovie] = useState({})
-  const [loading, setLoading] = useState(true)
-  const { id } = useParams()
+  const [movie, setMovie] = useState({});
+  const [loading, setLoading] = useState(true);
+  const { id } = useParams();
+
 
   useEffect(() => {
     const fetchMovie = async () => {
-      const movieData = await getMovie(id)
-      setMovie(movieData)
-        setLoading(false)
+      const movieData = await getMovie(id);
+      setMovie(movieData);
+      setLoading(false);
+      
+      window.scrollTo(0, 0);
     };
-    fetchMovie()
-  }, [id])
-
+    fetchMovie();
+  }, [id]);
   
   if (loading) {
     return <div>Loading...</div>
@@ -55,10 +57,15 @@ const MovieDetails = () => {
             <h4>Cast</h4>
             <p>{movie.Actors}</p>
           </div>
-          <p>Explore more</p>
+          
         </div>
-      </div>
+         
     </div>
+      <div className="movie-suggestions-container">
+
+          <ExploreMore className="suggestions" />
+      </div>
+      </div >
   );
 };
 

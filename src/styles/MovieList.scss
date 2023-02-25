@@ -22,9 +22,9 @@
     width: var(--img-width);
     height: var(--img-height);
 
-    @media screen and (min-width: 768px) {
-      width: calc(var(--img-width) * 1.5);
-      height: calc(var(--img-height) * 1.5);
+    @media (min-width: 968px) {
+      width: calc(var(--img-width) * 1.2);
+      height: calc(var(--img-height) * 1.2);
     }
   }
 

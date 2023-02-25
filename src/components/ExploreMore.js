@@ -1,29 +1,25 @@
-// import React from 'react'
-// import '../styles/MovieList.scss'
-// import { Link } from 'react-router-dom'
+import React,{useState, useEffect} from "react";
+import "../styles/MovieList.scss";
+import MovieList from "./MovieList";
+import  {useParams} from "react-router-dom";
 
+const ExploreMore = () => {
+    const {id} = useParams();
+    const [suggestions, setSuggestions] = useState([]);
+    useEffect(() => {
+        const getSuggestions = JSON.parse(localStorage.getItem("lastSearchResults")) || [];
+        const filteredSuggestions = getSuggestions.filter((movie) => movie.imdbID !== id);
+    setSuggestions(filteredSuggestions);
+    }, [id]);
 
-// const ExploreMore = (props) => {
-//     const movie = props.movie
-//     return (
-//         <div className="explore-more">
-//             <h4>Explore More</h4>
-//             <div className="explore-more-list">
-//                 {movie.map((movie, index) => (
-//                     <Link to={`/movie/${movie.imdbID}`} key={index}>
-//                         <div className="explore-more-item">
-//                             <img src={movie.Poster} alt="movie" />
-//                             <div className="overlay-info">
-//                                 <h3>{movie.Title}</h3>
-//                                 <p>{movie.Year}</p>
-//                             </div>
-//                         </div>
-//                     </Link>
-//                 ))}
-//             </div>
-//         </div>
-//     )
-// }
+  return (
+    <div>
+      <h2>You may also like... </h2>
+      <div>
+        <MovieList movies={suggestions} />
+      </div>
+    </div>
+  );
+};
 
-// export default ExploreMore
-    
+export default ExploreMore;
