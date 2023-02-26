@@ -19,6 +19,7 @@ const MovieList = (props) => {
               <p>{movie.Year}</p>
             </div>
           </div>
+        
         </Link>
       ))}
     </div>

@@ -14,25 +14,18 @@
   --white-color: #ffffff;
 }
 
-body {
+html,body {
   background-color: var(--background-color);
   color: var(--white-color);
   font-family: var(--font-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width:100%;
+  min-height:100%;
+
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
   
 }
 
-.flex {
-  display: flex;
-}
-
-.padding-small {
-  padding: 1rem;
-}
-.padding-medium {
-  padding: 2rem;
-}
-.padding-large {
-  padding: 3rem;
-}

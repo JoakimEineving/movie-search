@@ -1,18 +1,40 @@
 .search-bar-container {
   display: flex;
   justify-content: center;
-  margin: 1rem 0;
+  margin: 1rem;
 
   input[type="text"] {
     background-color: var(--darkGray-color);
     color: var(--white-color);
     width: 100%;
-    max-width: 500px;
-    padding: 0.8rem 1rem;
+    max-width: 20rem;
+    padding: 1rem 1rem;
     border: none;
     border-radius: 50px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     outline: none;
+    font-size: 0.8rem;
+
+    &::placeholder {
+      color: var(--lightGray-color);
+    }
+  }
+  input[type="number"] {
     
+    background-color: var(--darkGray-color);
+    color: var(--white-color);
+    
+    max-width: 4rem;
+    margin-left: 1rem;
+    padding: 0.8rem 1rem;
+    border: none;
+    font-size: 0.8rem;
+    
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    --webkit-appearance: none;
+    &::placeholder {
+      color: var(--lightGray-color);
+    }
   }
 }

@@ -3,9 +3,17 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 
-  padding: 1rem 0.5rem;
-}
+  
 
+  padding: 1rem 0.5rem;
+
+
+  @media (min-width: 768px) {
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+}
 // .movie-list-container::-webkit-scrollbar {
 //     display: none;
 //   }
@@ -15,9 +23,16 @@
   margin-right: 1rem;
   transition: transform 0.3s ease-in-out;
 
+  @media (min-width: 768px) {
+    margin-bottom: 1rem;
+    
+  }
+
+
+
   img {
-    --img-width: 13.125rem;
-    --img-height: 18.9rem;
+    --img-width: 210px;
+    --img-height: 300px;
     border-radius: 20px;
     width: var(--img-width);
     height: var(--img-height);
@@ -59,4 +74,9 @@
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+
+  h3,p {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
 }

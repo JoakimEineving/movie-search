@@ -10,6 +10,12 @@ const SearchBar = (props) => {
             value={props.value}
           onChange={(event) => props.setSearchValue(event.target.value)} 
         />
+        <input
+            type="number"
+            placeholder="Year"
+            value={props.year}
+            onChange={(event) => props.setYear(event.target.value)}
+              /> 
       </div>
     );
   };
