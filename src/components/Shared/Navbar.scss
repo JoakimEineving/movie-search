@@ -10,7 +10,7 @@
   }
   a {
     text-decoration: none;
-    background-image: linear-gradient(to bottom left, #553c9a, #0296e5);
+    background-image: linear-gradient(to bottom left, #553c9a, var(--brand-color));
     color: transparent;
     background-clip: text;
     overflow: hidden;

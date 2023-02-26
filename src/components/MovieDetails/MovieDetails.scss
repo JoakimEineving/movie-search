@@ -57,10 +57,12 @@
 }
 .movie-header {
   display: flex;
+ 
   align-items: center;
   
   h1 {
-    padding-right: 0.3rem;
+    
+    padding-right: 0.5rem;
   }
   
  
@@ -84,8 +86,8 @@
   height: auto;
 
   .movie-quick-info {
-    margin: 10px 0;
-    font-size: 14px;
+    margin: 1rem 0;
+    font-size: 1rem;
     color: var(--gray-color);
   }
 }
@@ -107,13 +109,9 @@
   }
 }
 
-.hide-nav {
-  @media (max-width: 500px) {
-    display: none;
-  }
-}
 .hide-arrow {
   @media (min-width: 500px) {
     display: none;
   }
 }
+

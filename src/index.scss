@@ -5,9 +5,10 @@
 }
 :root {
   --font-base: 'Poppins', sans-serif;
-                                                
+  --brand-color: #0296e5;                                              
   --background-color: #242A32;
   --primary-color: #3f96ff00;
+  --scrollbar-color: #266ec4;
   --darkGray-color: #3A3F47;
   --lightGray-color: #cbcbcb;
   --gray-color: #67686D;
@@ -24,8 +25,10 @@ html,body {
   min-height:100%;
 
   @media (min-width: 768px) {
-    font-size: 22px;
+    font-size: 18px;
   }
-  
+  @media (min-width: 968px) {
+    font-size: 20px;
+  }
 }
 

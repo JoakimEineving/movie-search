@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getSearchMovies, getPopularMovies } from "../Services/MovieService";
+import { getSearchMovies, getPopularMovies } from "../services/MovieService";
 
 const useMoviesData = (searchValue, year) => {
   const [searchMovies, setSearchMovies] = useState([]);

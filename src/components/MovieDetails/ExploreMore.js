@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "../styles/MovieList.scss";
-import MovieList from "./MovieList";
+import {MovieList} from "../index";
 import { useParams } from "react-router-dom";
+import "../Main/MovieList.scss";
 
 const ExploreMore = () => {
   const { id } = useParams();
   const [suggestions, setSuggestions] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getSuggestions =
@@ -15,12 +14,8 @@ const ExploreMore = () => {
       (movie) => movie.imdbID !== id
     );
     setSuggestions(filteredSuggestions);
-    setLoading(false);
   }, [id]);
 
-    if (loading) {
-    return <div></div>
-    }
   return (
     <div>
       <h2>You may also like... </h2>

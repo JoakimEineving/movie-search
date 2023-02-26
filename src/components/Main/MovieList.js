@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/MovieList.scss";
 import { Link } from "react-router-dom";
+import "./MovieList.scss";
 
 const MovieList = (props) => {
 

@@ -20,16 +20,15 @@
     }
   }
   input[type="number"] {
-    
     background-color: var(--darkGray-color);
     color: var(--white-color);
-    
+
     max-width: 4rem;
     margin-left: 1rem;
     padding: 0.8rem 1rem;
     border: none;
     font-size: 0.8rem;
-    
+
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     outline: none;
     --webkit-appearance: none;

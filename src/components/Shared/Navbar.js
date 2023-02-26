@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/Navbar.scss'
-import ArrowBack from './ArrowBack'
+import './Navbar.scss'
+import ArrowBack from '../Buttons/ArrowBack'
 
 
 const Navbar = () => {

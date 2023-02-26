@@ -1,0 +1,5 @@
+.hide-nav {
+  @media (max-width: 500px) {
+    display: none;
+  }
+}

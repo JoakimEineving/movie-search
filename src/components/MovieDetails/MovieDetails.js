@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "../styles/MovieDetails.scss";
-import {useParams } from "react-router-dom";
-import { getMovieById } from "../api/api";
-import ExploreMore from "../components/ExploreMore";
-import ArrowBack from "./ArrowBack";
-import StarMovie from "./StarMovie";
+import { useParams } from "react-router-dom";
+import { getMovieById } from "../../services/MovieService";
+import { ArrowBack, StarMovie, ExploreMore } from "../index";
+import "./MovieDetails.scss";
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState({});
@@ -25,21 +23,18 @@ const MovieDetails = () => {
   return (
     <div className="wrapper">
       <span className="hide-arrow">
-      <ArrowBack />
+        <ArrowBack />
       </span>
 
       <div className="movie-details-container">
+        <StarMovie movie={movie} />
+
         <img src={movie.Poster} alt="movie" />
         <div className="movie-details">
+          <div className="movie-header">
+            <h1>{movie.Title}</h1>
+          </div>
 
-            <div className="movie-header">
-
-          <h1 className="movie-title">
-            {movie.Title}
-              </h1>
-            <StarMovie movie={movie}/>
-            </div>
-            
           <div className="movie-quick-info">
             <p>{`${movie.Year} | `}</p>
             <p>{`${movie.Runtime} | `}</p>
@@ -48,17 +43,10 @@ const MovieDetails = () => {
           <div className="movie-summary">
             <h4>Storyline</h4>
             <p>{movie.Plot}</p>
-            <h4>Ratings</h4>
-
-            {/* {movie.Ratings.map((rating, index) => (
-              <p key={index}>{`${rating.Source}: ${rating.Value}`}</p>
-            ))} */}
             <h4>Actors</h4>
             <p>{movie.Actors}</p>
-
-            <h4>Languages</h4>
-            <p>{movie.Language}</p>
-            
+            <h4>Awards</h4>
+            <p>{movie.Awards}</p>
           </div>
         </div>
       </div>

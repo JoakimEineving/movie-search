@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import MovieList from "../components/MovieList";
-import SearchBar from "../components/SearchBar";
-
-import "../styles/LandingPage.scss";
-import Navbar from "../components/Navbar";
-import useMoviesData from "../hooks/useMoviesData";
+import { MovieList, SearchBar, Navbar } from "../../components";
+import useMoviesData from "../../hooks/useMoviesData";
+import "./MainPage.scss";
 
 const LandingPage = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -16,18 +13,19 @@ const LandingPage = () => {
   return (
     <div className="wrapper-landing">
       <Navbar />
-
       <SearchBar
         searchValue={searchValue}
         setSearchValue={setSearchValue}
         year={year}
         setYear={setYear}
       />
-      {!searchValue && localStorage.getItem("lastSearchResults") ? (
-        <h2>Previous Search</h2>
-      ) : (
-        <h2>{searchValue ? `Search Results for "${searchValue}"` : null}</h2>
-      )}
+      {!searchValue &&
+        (localStorage.getItem("lastSearchResults") !== null &&
+        localStorage.getItem("lastSearchResults") !== "[]" ? (
+          <h2>Previous Search</h2>
+        ) : (
+          <h2>{searchValue ? `Search Results for "${searchValue}"` : null}</h2>
+        ))}
       <div>
         <MovieList movies={searchMovies} />
       </div>
