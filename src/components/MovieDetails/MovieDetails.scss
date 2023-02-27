@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  
 
   h1 {
     font-weight: 400;
@@ -20,7 +19,6 @@
   align-items: center;
   height: 100%;
   overflow-y: auto;
-  
 
   p {
     font-size: 1rem;
@@ -40,19 +38,12 @@
       mask-image: none;
       align-self: center;
       margin: 0;
-
     }
     @media (min-width: 968px) {
-      
       height: 550px;
-      
-      
-      
-    
     }
   }
   @media (min-width: 968px) {
-    
     background-color: #2d3034;
     box-shadow: 0 0 3px 0 #0296e5;
     border-radius: 20px;
@@ -80,7 +71,6 @@
   }
 }
 
-
 .hide-arrow {
   @media (min-width: 500px) {
     display: none;
@@ -92,5 +82,3 @@
     display: none;
   }
 }
-
-

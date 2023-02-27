@@ -1,5 +1,5 @@
 import React from "react";
-import {MovieDetails, Navbar} from "../../components/index";
+import { MovieDetails, Navbar } from "../../components/index";
 import "./MoviePage.scss";
 
 const MovieDetailsPage = () => {
