@@ -21,15 +21,12 @@ const LandingPage = () => {
       />
       {!searchValue &&
         (localStorage.getItem("lastSearchResults") !== null &&
-        localStorage.getItem("lastSearchResults") !== "[]" ? (
+          localStorage.getItem("lastSearchResults") !== "[]" ? (
           <h2>Previous Search</h2>
         ) : (
           <h2>{searchValue ? `Search Results for "${searchValue}"` : null}</h2>
         ))}
-      <div>
-        <MovieList movies={searchMovies} />
-      </div>
-
+      <MovieList movies={searchMovies} />
       {starredMovies.length > 0 && (
         <div>
           <h2>Starred Movies</h2>
@@ -37,9 +34,7 @@ const LandingPage = () => {
         </div>
       )}
       <h2>Most Popular Movies</h2>
-      <div>
-        <MovieList movies={popularMovies} />
-      </div>
+      <MovieList movies={popularMovies} />
     </div>
   );
 };

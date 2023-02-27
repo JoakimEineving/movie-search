@@ -12,22 +12,28 @@ import "./MovieDetails.scss";
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState({});
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
     const fetchMovie = async () => {
       const movieData = await getMovieById(id);
       setMovie(movieData);
+      setLoading(false);
       window.scrollTo(0, 0);
     };
     fetchMovie();
   }, [id]);
 
-  if (!movie) {
-    return <div></div>;
+  if (loading) {
+    return (
+      <div>
+      </div>
+    )
   }
   return (
     <div className="wrapper">
+
       <span className="hide-arrow">
         <ArrowBack />
       </span>
