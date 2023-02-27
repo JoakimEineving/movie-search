@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import "./Icons.scss";
+import "./Buttons.scss";
 
 const StarMovie = ({ movie }) => {
   const [star, setStar] = useState(false);
@@ -36,7 +36,7 @@ const StarMovie = ({ movie }) => {
   return (
     <div>
       <FontAwesomeIcon
-        className={`star hide-star ${star ? "starred" : "unstarred"}`}
+        className={`star ${star ? "starred" : "unstarred"}`}
         icon={faStar}
         onClick={toggleStar}
         title="Star this movie"

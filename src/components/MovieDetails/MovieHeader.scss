@@ -1,0 +1,23 @@
+.movie-header {
+  display: flex;
+  align-items: center;
+
+  h1 {
+    padding-right: 0.5rem;
+  }
+}
+.movie-quick-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  white-space: pre;
+  font-style: italic;
+  color: var(--gray-color);
+}
+
+.hide-star {
+    @media (max-width: 500px) {
+      display: none;
+  }
+}

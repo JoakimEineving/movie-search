@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getMovieById } from "../../services/MovieService";
-import { ArrowBack, StarMovie, ExploreMore } from "../index";
+import { ArrowBack, StarMovie, ExploreMore, MovieSummary, MovieHeader} from "../index";
 import "./MovieDetails.scss";
 
 const MovieDetails = () => {
@@ -27,27 +27,15 @@ const MovieDetails = () => {
       </span>
 
       <div className="movie-details-container">
-        <StarMovie movie={movie} />
+      <span className='hidden'>
+          <StarMovie movie={movie} />
+            </span>
+        
 
         <img src={movie.Poster} alt="movie" />
         <div className="movie-details">
-          <div className="movie-header">
-            <h1>{movie.Title}</h1>
-          </div>
-
-          <div className="movie-quick-info">
-            <p>{`${movie.Year} | `}</p>
-            <p>{`${movie.Runtime} | `}</p>
-            <p>{movie.Genre}</p>
-          </div>
-          <div className="movie-summary">
-            <h4>Storyline</h4>
-            <p>{movie.Plot}</p>
-            <h4>Actors</h4>
-            <p>{movie.Actors}</p>
-            <h4>Awards</h4>
-            <p>{movie.Awards}</p>
-          </div>
+          <MovieHeader movie={movie} />
+          <MovieSummary movie={movie} />
         </div>
       </div>
       <div className="movie-suggestions-container">

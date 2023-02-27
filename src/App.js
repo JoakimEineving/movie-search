@@ -1,8 +1,7 @@
-import "./App.css";
-import "./index.scss";
 import MainPage from "./pages/MainPage/MainPage";
 import MoviePage from "./pages/MoviePage/MoviePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.scss";
 
 function App() {
   return (

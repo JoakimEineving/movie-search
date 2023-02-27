@@ -1,0 +1,20 @@
+.movie-summary {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 800px;
+  
+    p {
+      font-size: 1rem;
+      color: var(--lightGray-color);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 15;
+      -webkit-box-orient: vertical;
+
+        @media (max-width: 968px) {
+            -webkit-line-clamp: 25;
+        }
+    }
+  }
