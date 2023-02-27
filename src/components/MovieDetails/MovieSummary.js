@@ -2,7 +2,6 @@ import React from "react";
 import "./MovieSummary.scss";
 
 const MovieDetails = ({ movie }) => {
-  console.log(movie);
   return (
     <div className="movie-summary">
       <h4>Storyline</h4>

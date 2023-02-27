@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MovieList, SearchBar, Navbar } from "../../components";
+import { MovieList, SearchBar, Navbar, SearchResultsHeader } from "../../components";
 import useMoviesData from "../../hooks/useMoviesData";
 import "./MainPage.scss";
 
@@ -19,13 +19,7 @@ const LandingPage = () => {
         year={year}
         setYear={setYear}
       />
-      {!searchValue &&
-        (localStorage.getItem("lastSearchResults") !== null &&
-          localStorage.getItem("lastSearchResults") !== "[]" ? (
-          <h2>Previous Search</h2>
-        ) : (
-          <h2>{searchValue ? `Search Results for "${searchValue}"` : null}</h2>
-        ))}
+      <SearchResultsHeader searchValue={searchValue} />
       <MovieList movies={searchMovies} />
       {starredMovies.length > 0 && (
         <div>
