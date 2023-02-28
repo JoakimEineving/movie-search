@@ -1,4 +1,6 @@
 export { default as Navbar } from "./Shared/Navbar";
+export { default as Loader } from "./Shared/Loader";
+
 export { default as MovieList } from "./Main/MovieList";
 export { default as SearchBar } from "./Main/SearchBar";
 export { default as SearchResultsHeader } from "./Main/SearchResultsHeader";

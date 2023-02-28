@@ -7,6 +7,7 @@ import {
   ExploreMore,
   MovieSummary,
   MovieHeader,
+  Loader,
 } from "../index";
 import "./MovieDetails.scss";
 
@@ -28,12 +29,12 @@ const MovieDetails = () => {
   if (loading) {
     return (
       <div>
+        <Loader />
       </div>
     )
   }
   return (
     <div className="wrapper">
-
       <span className="hide-arrow">
         <ArrowBack />
       </span>

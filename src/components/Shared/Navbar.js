@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.scss";
+import "./Shared.scss";
 import ArrowBack from "../Buttons/ArrowBack";
 
 const Navbar = () => {
