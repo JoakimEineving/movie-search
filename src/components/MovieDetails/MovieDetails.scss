@@ -65,12 +65,7 @@
   height: auto;
 }
 
-.hide-arrow {
-  @media (min-width: 500px) {
-    display: none;
-  }
-}
-
+.hide-arrow,
 .hidden {
   @media (min-width: 500px) {
     display: none;

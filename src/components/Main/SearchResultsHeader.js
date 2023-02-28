@@ -1,4 +1,5 @@
 import React from 'react'
+import {MotionHeader} from '../index'
 
 const SearchResultsHeader = ({ searchValue }) => {
     return (
@@ -6,7 +7,7 @@ const SearchResultsHeader = ({ searchValue }) => {
             {!searchValue &&
                 (localStorage.getItem("lastSearchResults") !== null &&
                     localStorage.getItem("lastSearchResults") !== "[]") && (
-                    <h2>Previous Search</h2>
+                    <MotionHeader text={"Last Search Results"} />
                 )}
         </div>
     )

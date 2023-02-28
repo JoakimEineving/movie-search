@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MovieList, SearchBar, Navbar, SearchResultsHeader } from "../../components";
+import { MovieList, SearchBar, Navbar, SearchResultsHeader,  MotionHeader } from "../../components";
 import useMoviesData from "../../hooks/useMoviesData";
 import "./MainPage.scss";
 
@@ -12,7 +12,7 @@ const LandingPage = () => {
   );
   return (
     <div className="wrapper-landing">
-      <Navbar />
+      <Navbar animate={true} />
       <SearchBar
         searchValue={searchValue}
         setSearchValue={setSearchValue}
@@ -24,11 +24,11 @@ const LandingPage = () => {
       <MovieList movies={searchMovies} />
       {starredMovies.length > 0 && (
         <div>
-          <h2>Starred Movies</h2>
+          <MotionHeader text={"Starred Movies"} />
           <MovieList movies={starredMovies} />
         </div>
       )}
-      <h2>Most Popular Movies</h2>
+      <MotionHeader text={"Most Popular Movies"} />
       <MovieList movies={popularMovies} />
     </div>
   );

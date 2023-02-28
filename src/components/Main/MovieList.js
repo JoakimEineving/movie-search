@@ -1,24 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./MovieList.scss";
+import {MapMotion} from "../index";
 
 const MovieList = (props) => {
   if (!props.movies) {
     return <div></div>;
   }
+
   return (
+    //same code but with AnimatePresence and MapMotion
+      
     <div className="movie-list-container">
-      {props.movies.map((movie, index) => (
-        <Link to={`/movie/${movie.imdbID}`}>
-          <div key={index} className="movie-list-item">
-            <img src={movie.Poster} alt="movie" />
-            <div className="overlay-info">
-              <h3>{movie.Title}</h3>
-              <p>{movie.Year}</p>
-            </div>
-          </div>
-        </Link>
-      ))}
+        {props.movies.map((movie, index) => (
+          <Link to={`/movie/${movie.imdbID}`}>
+          <MapMotion index={index}>
+              
+            
+              <div className="movie-list-item" key={index}>
+
+              <img src={movie.Poster} alt="movie" />
+              <div className="overlay-info">
+                <h3>{movie.Title}</h3>
+                <p>{movie.Year}</p>
+              </div>
+              </div>
+            </MapMotion>
+          </Link>
+        ))}
     </div>
   );
 };
