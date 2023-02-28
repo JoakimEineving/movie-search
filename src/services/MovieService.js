@@ -3,24 +3,36 @@ import axios from "axios";
 const apiKey = process.env.REACT_APP_API_KEY;
 
 const getMovieById = async (id) => {
-  const response = await axios.get(
-    `http://www.omdbapi.com/?i=${id}&plot=full&apikey=${apiKey}`
-  );
-  return response.data;
+  try {
+    const response = await axios.get(
+      `http://www.omdbapi.com/?i=${id}&plot=full&apikey=${apiKey}`
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const getSearchMovies = async (searchValue, year) => {
-  const response = await axios.get(
-    `http://www.omdbapi.com/?s=${searchValue}&y=${year}&apikey=${apiKey}`
-  );
-  return response.data.Search;
+  try {
+    const response = await axios.get(
+      `http://www.omdbapi.com/?s=${searchValue}&y=${year}&apikey=${apiKey}`
+    );
+    return response.data.Search;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const getPopularMovies = async () => {
-  const response = await axios.get(
-    `http://www.omdbapi.com/?s=popular&apikey=${apiKey}`
-  );
-  return response.data.Search;
+  try {
+    const response = await axios.get(
+      `http://www.omdbapi.com/?s=popular&apikey=${apiKey}`
+    );
+    return response.data.Search;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export { getMovieById, getSearchMovies, getPopularMovies };
