@@ -1,15 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./MovieList.scss";
-import { Loader } from "../index";
 
 const MovieList = (props) => {
   if (!props.movies) {
-    return (
-      <div>
-        <Loader />
-      </div>
-    );
+    return <div></div>;
   }
   return (
     <div className="movie-list-container">
