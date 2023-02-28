@@ -1,5 +1,5 @@
 .wrapper {
-  min-height: 100vh;
+  min-height: 100%;
   max-width: 1200px;
   justify-content: center;
   align-items: center;
@@ -51,7 +51,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding: 1rem 2rem;
+    padding: 1rem;
     margin: 1rem;
   }
 }
