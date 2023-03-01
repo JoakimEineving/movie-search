@@ -21,5 +21,5 @@ export { default as StarMovie } from "./Buttons/StarMovie";
 export { default as LogoMotion } from "./Animations/LogoMotion";
 export { default as SearchBarMotion } from "./Animations/SearchBarMotion";
 export { default as MapMotion } from "./Animations/MapMotion";
-export { default as MotionHeader } from "./Animations/MotionHeader";
+export { default as HeaderMotion } from "./Animations/HeaderMotion";
 

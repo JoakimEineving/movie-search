@@ -1,5 +1,5 @@
 import React from 'react'
-import {MotionHeader} from '../index'
+import {HeaderMotion} from '../index'
 
 const SearchResultsHeader = ({ searchValue }) => {
     return (
@@ -7,7 +7,7 @@ const SearchResultsHeader = ({ searchValue }) => {
             {!searchValue &&
                 (localStorage.getItem("lastSearchResults") !== null &&
                     localStorage.getItem("lastSearchResults") !== "[]") && (
-                    <MotionHeader text={"Last Search Results"} />
+                    <HeaderMotion text={"Last Search Results"} />
                 )}
         </div>
     )

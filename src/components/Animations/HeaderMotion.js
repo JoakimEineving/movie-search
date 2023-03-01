@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const MotionHeader = ({ text }) => {
+const HeaderMotion = ({ text }) => {
     return (
       <motion.h2
         initial={{ opacity: 0, y: 0 }}
@@ -13,4 +13,4 @@ const MotionHeader = ({ text }) => {
     );
   };
   
-  export default MotionHeader;
+  export default HeaderMotion;

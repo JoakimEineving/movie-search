@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { MovieList, SearchBar, Navbar, SearchResultsHeader,  MotionHeader } from "../../components";
+import {
+  MovieList,
+  SearchBar,
+  Navbar,
+  SearchResultsHeader,
+  HeaderMotion,
+} from "../../components";
 import useMoviesData from "../../hooks/useMoviesData";
 import "./MainPage.scss";
 
@@ -21,14 +27,15 @@ const LandingPage = () => {
       />
       <SearchResultsHeader searchValue={searchValue} />
       <h2>{searchValue ? `Search Results for "${searchValue}"` : null}</h2>
-      <MovieList movies={searchMovies} />
+      {searchValue ? <MovieList movies={searchMovies} /> : null}
+
       {starredMovies.length > 0 && (
         <div>
-          <MotionHeader text={"Starred Movies"} />
+          <HeaderMotion text={"Starred Movies"} />
           <MovieList movies={starredMovies} />
         </div>
       )}
-      <MotionHeader text={"Most Popular Movies"} />
+      <HeaderMotion text={"Most Popular Movies"} />
       <MovieList movies={popularMovies} />
     </div>
   );
