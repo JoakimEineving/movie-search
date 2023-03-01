@@ -27,7 +27,7 @@ const LandingPage = () => {
       />
       <SearchResultsHeader searchValue={searchValue} />
       <h2>{searchValue ? `Search Results for "${searchValue}"` : null}</h2>
-      {searchValue ? <MovieList movies={searchMovies} /> : null}
+      <MovieList movies={searchMovies} />
 
       {starredMovies.length > 0 && (
         <div>

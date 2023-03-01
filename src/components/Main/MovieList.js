@@ -5,7 +5,7 @@ import { MapMotion } from "../index";
 
 const MovieList = (props) => {
   if (!props.movies) {
-    return <div></div>;
+    return null;
   }
 
   return (
