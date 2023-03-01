@@ -5,7 +5,7 @@ const apiKey = process.env.REACT_APP_API_KEY;
 const getMovieById = async (id) => {
   try {
     const response = await axios.get(
-      `https://www.omdbapi.com/?i=${id}&plot=full&apikey=${apiKey}`
+      `https://www.omdbapi.com/?i=${id}&apikey=${apiKey}`
     );
     return response.data;
   } catch (error) {

@@ -42,9 +42,12 @@
     transform: scale(1.05);
     cursor: pointer;
 
-    .overlay-info {
-      opacity: 1;
+    @media (min-width: 968px) {
+      .overlay-info {
+        opacity: 1;
+      }
     }
+    
   }
 }
 .overlay-info {

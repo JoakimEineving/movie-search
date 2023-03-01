@@ -3,18 +3,42 @@
   flex-direction: column;
   padding: 1rem;
   max-width: 800px;
+  overflow: hidden;
+  height: 100%;
 
   p {
     font-size: 1rem;
     color: var(--lightGray-color);
-    overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 15;
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
 
-    @media (max-width: 968px) {
-      -webkit-line-clamp: 25;
-    }
+  
   }
+}
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.movie-info > div span:first-child {
+  width: 10rem;
+  align-self: flex-start;
+  font-weight: 500;
+}
+
+.movie-info > div span:nth-child(2) {
+  box-sizing: content-box;
+  align-self: flex-end;
+  width: 100%;
+  font-style: italic;
+  color: var(--lightGray-color);
+}
+.movie-info-item {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 0.8rem;
+  color: var(--third-color);
 }

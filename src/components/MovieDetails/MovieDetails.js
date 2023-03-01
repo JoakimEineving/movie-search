@@ -43,7 +43,7 @@ const MovieDetails = () => {
         <span className="hidden">
           <StarMovie movie={movie} />
         </span>
-
+      
         <img src={movie.Poster} alt="movie" />
         <div className="movie-details">
           <MovieHeader movie={movie} />
