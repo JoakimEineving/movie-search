@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { getMovieById } from "../../services/MovieService";
+import "./MovieDetails.scss";
+
+import React, {useEffect, useState} from "react";
+import {useParams} from "react-router-dom";
+
+import {getMovieById} from "../../services/MovieService";
 import {
   ArrowBack,
-  StarMovie,
   ExploreMore,
-  MovieSummary,
-  MovieHeader,
   Loader,
+  MovieHeader,
+  MovieSummary,
+  StarMovie,
 } from "../index";
-import "./MovieDetails.scss";
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState({});

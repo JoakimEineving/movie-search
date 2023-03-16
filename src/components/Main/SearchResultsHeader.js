@@ -1,7 +1,8 @@
 import React from 'react'
+
 import {HeaderMotion} from '../index'
 
-const SearchResultsHeader = ({ searchValue }) => {
+const SearchResultsHeader = ({searchValue}) => {
     return (
         <div>
             {!searchValue &&

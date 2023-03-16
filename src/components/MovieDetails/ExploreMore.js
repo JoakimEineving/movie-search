@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { MovieList } from "../index";
-import { useParams } from "react-router-dom";
 import "../Main/MovieList.scss";
+
+import React, {useEffect, useState} from "react";
+import {useParams} from "react-router-dom";
+
+import {MovieList} from "../index";
 
 const ExploreMore = () => {
   const { id } = useParams();

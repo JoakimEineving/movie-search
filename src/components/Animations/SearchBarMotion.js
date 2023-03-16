@@ -1,7 +1,7 @@
+import {motion} from "framer-motion";
 import React from "react";
-import { motion } from "framer-motion";
 
-const SearchBarMotion = ({ children }) => {
+const SearchBarMotion = ({children}) => {
   return (
     <motion.div
       initial={{ y: -50, opacity: 0.5 }}

@@ -1,7 +1,7 @@
+import {motion} from "framer-motion";
 import React from "react";
-import { motion } from "framer-motion";
 
-const MapMotion = ({ children, index }) => {
+const MapMotion = ({children, index}) => {
   return (
     <motion.div
       initial={{ x: 20, opacity: 0.01 }}

@@ -1,10 +1,12 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 import "./Buttons.scss";
+
+import {faStar} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import React from "react";
+
 import useStarMovie from "../../hooks/useStarMovie";
 
-const StarMovie = ({ movie }) => {
+const StarMovie = ({movie}) => {
   const [star, toggleStar] = useStarMovie({movie});
 
   return (

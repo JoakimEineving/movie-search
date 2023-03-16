@@ -1,7 +1,8 @@
-import React from "react";
 import "./MovieSummary.scss";
 
-const MovieDetails = ({ movie }) => {
+import React from "react";
+
+const MovieDetails = ({movie}) => {
   return (
     <div className="movie-summary">
       <div>{movie.Plot}</div>

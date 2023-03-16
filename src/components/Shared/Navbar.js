@@ -1,10 +1,11 @@
-import React from "react";
 import "./Shared.scss";
+
+import React from "react";
+
 import ArrowBack from "../Buttons/ArrowBack";
 import {LogoMotion} from "../index";
 
-
-const Navbar = ({ animate }) => {
+const Navbar = ({animate}) => {
   return (
     animate ? (
       <LogoMotion>

@@ -1,7 +1,7 @@
+import {motion} from 'framer-motion'
 import React from 'react'
-import { motion } from 'framer-motion'
 
-const HeaderMotion = ({ text }) => {
+const HeaderMotion = ({text}) => {
     return (
       <motion.h2
         initial={{ opacity: 0, y: 0 }}

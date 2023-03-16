@@ -1,7 +1,7 @@
+import {motion} from "framer-motion";
 import React from "react";
-import { motion } from "framer-motion";
 
-const SlidingMotion = ({ children }) => {
+const SlidingMotion = ({children}) => {
   return (
     <motion.div
       initial={{ y: -100, opacity: 0.5 }}

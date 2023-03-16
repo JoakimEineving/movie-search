@@ -4,9 +4,8 @@ const apiKey = process.env.REACT_APP_API_KEY;
 
 const getMovieById = async (id) => {
   try {
-    const response = await axios.get(
-      `https://www.omdbapi.com/?i=${id}&apikey=${apiKey}`
-    );
+    const response =
+        await axios.get(`https://www.omdbapi.com/?i=${id}&apikey=${apiKey}`);
     return response.data;
   } catch (error) {
     console.log(error);
@@ -16,8 +15,7 @@ const getMovieById = async (id) => {
 const getSearchMovies = async (searchValue, year) => {
   try {
     const response = await axios.get(
-      `https://www.omdbapi.com/?s=${searchValue}&y=${year}&apikey=${apiKey}`
-    );
+        `https://www.omdbapi.com/?s=${searchValue}&y=${year}&apikey=${apiKey}`);
     return response.data.Search;
   } catch (error) {
     console.log(error);
@@ -26,13 +24,12 @@ const getSearchMovies = async (searchValue, year) => {
 
 const getPopularMovies = async () => {
   try {
-    const response = await axios.get(
-      `https://www.omdbapi.com/?s=popular&apikey=${apiKey}`
-    );
+    const response =
+        await axios.get(`https://www.omdbapi.com/?s=popular&apikey=${apiKey}`);
     return response.data.Search;
   } catch (error) {
     console.log(error);
   }
 };
 
-export { getMovieById, getSearchMovies, getPopularMovies };
+export {getMovieById, getSearchMovies, getPopularMovies};
