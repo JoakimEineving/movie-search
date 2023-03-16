@@ -1,7 +1,7 @@
 .star {
   cursor: pointer;
   font-size: 1.8rem;
-  opacity: 0.7;
+  opacity: 0.8;
 
   :hover {
     transform: scale(1.05);
@@ -20,7 +20,7 @@
 }
 
 .starred {
-  color: rgb(246, 253, 53);
+  color: rgb(255, 255, 0);
 }
 .unstarred {
   color: var(--LightGray-color);
@@ -34,4 +34,15 @@
   margin: 1rem;
   font-size: 2rem;
   cursor: pointer;
+  
+}
+
+.back-arrow, .star {
+  :hover {
+    transform: scale(1.05);
+  }
+
+  :active {
+    transform: scale(0.95);
+  }
 }

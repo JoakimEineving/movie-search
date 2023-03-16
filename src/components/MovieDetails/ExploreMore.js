@@ -16,6 +16,9 @@ const ExploreMore = () => {
     setSuggestions(filteredSuggestions);
   }, [id]);
 
+  if (suggestions.length === 0) {
+    return <div></div>;
+  }
   return (
     <div>
       <h2>You may also like... </h2>

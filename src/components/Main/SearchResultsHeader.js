@@ -1,15 +1,14 @@
 import React from 'react'
+import {HeaderMotion} from '../index'
 
 const SearchResultsHeader = ({ searchValue }) => {
     return (
         <div>
             {!searchValue &&
                 (localStorage.getItem("lastSearchResults") !== null &&
-                    localStorage.getItem("lastSearchResults") !== "[]" ? (
-                    <h2>Previous Search</h2>
-                ) : (
-                    <h2>{searchValue ? `Search Results for "${searchValue}"` : null}</h2>
-                ))}
+                    localStorage.getItem("lastSearchResults") !== "[]") && (
+                    <HeaderMotion text={"Last Search Results"} />
+                )}
         </div>
     )
 }

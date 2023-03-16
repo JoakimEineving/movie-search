@@ -4,12 +4,29 @@ import "./MovieSummary.scss";
 const MovieDetails = ({ movie }) => {
   return (
     <div className="movie-summary">
-      <h4>Storyline</h4>
-      <p>{movie.Plot}</p>
-      {/* <h4>Actors</h4>
-            <p>{movie.Actors}</p>
-            <h4>Awards</h4>
-            <p>{movie.Awards}</p> */}
+      <div>{movie.Plot}</div>
+      <div className="movie-info">
+        <div className="movie-info-item">
+          <span>Actors</span>
+          <span>{movie.Actors}</span>
+        </div>
+        <div className="movie-info-item">
+          <span>Director</span>
+          <span>{movie.Director}</span>
+        </div>
+        <div className="movie-info-item">
+          <span>Language</span>
+          <span>{movie.Language}</span>
+        </div>
+        <div className="movie-info-item">
+          <span>Awards</span>
+          <span>{movie.Awards}</span>
+        </div>
+        <div className="movie-info-item">
+          <span>Rating</span>
+          <span>{movie.imdbRating} / 10</span>
+        </div>
+      </div>
     </div>
   );
 };
