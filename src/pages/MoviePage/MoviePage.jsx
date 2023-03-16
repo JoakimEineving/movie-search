@@ -6,7 +6,7 @@ const MovieDetailsPage = () => {
   return (
     <div>
       <div className="hide-nav">
-      <Navbar animate={false} />
+        <Navbar animate={false} />
       </div>
       <MovieDetails />
     </div>

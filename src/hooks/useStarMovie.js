@@ -1,13 +1,13 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
-const useStarMovie = ({movie}) => {
+const useStarMovie = ({ movie }) => {
   const [star, setStar] = useState(false);
 
   useEffect(() => {
     let movies = JSON.parse(localStorage.getItem("starredMovies")) || [];
     let isStarred = movies.some((m) => m.imdbID === movie.imdbID);
     setStar(isStarred);
-  }, [ movie.imdbID ]);
+  }, [movie.imdbID]);
 
   const toggleStar = () => {
     if (star) {
@@ -30,7 +30,7 @@ const useStarMovie = ({movie}) => {
     localStorage.setItem("starredMovies", JSON.stringify(movies));
   };
 
-  return [ star, toggleStar ];
+  return [star, toggleStar];
 };
 
 export default useStarMovie;

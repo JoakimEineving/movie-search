@@ -2,18 +2,17 @@ import "./SearchBar.scss";
 
 import React from "react";
 
-import {SearchBarMotion} from "../index";
+import { SearchBarMotion } from "../index";
 
 const SearchBar = (props) => {
   return (
     <SearchBarMotion>
       <div className="search-bar-container">
         <input
-  type = "text"
-  placeholder = "Search for a movie..."
+          type="text"
+          placeholder="Search for a movie..."
           value={props.value}
-          onChange={
-    (event) => props.setSearchValue(event.target.value)}
+          onChange={(event) => props.setSearchValue(event.target.value)}
         />
         <input
           type="number"

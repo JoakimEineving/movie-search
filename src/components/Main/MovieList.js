@@ -1,9 +1,9 @@
 import "./MovieList.scss";
 
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import {MapMotion} from "../index";
+import { MapMotion } from "../index";
 
 const MovieList = (props) => {
   if (!props.movies) {

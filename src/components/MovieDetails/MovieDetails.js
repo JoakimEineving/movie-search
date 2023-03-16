@@ -1,9 +1,9 @@
 import "./MovieDetails.scss";
 
-import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-import {getMovieById} from "../../services/MovieService";
+import { getMovieById } from "../../services/MovieService";
 import {
   ArrowBack,
   ExploreMore,
@@ -33,7 +33,7 @@ const MovieDetails = () => {
       <div>
         <Loader />
       </div>
-    )
+    );
   }
   return (
     <div className="wrapper">
@@ -45,7 +45,7 @@ const MovieDetails = () => {
         <span className="hidden">
           <StarMovie movie={movie} />
         </span>
-      
+
         <img src={movie.Poster} alt="movie" />
         <div className="movie-details">
           <MovieHeader movie={movie} />

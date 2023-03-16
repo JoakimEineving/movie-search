@@ -2,7 +2,7 @@ import "./MovieSummary.scss";
 
 import React from "react";
 
-const MovieDetails = ({movie}) => {
+const MovieDetails = ({ movie }) => {
   return (
     <div className="movie-summary">
       <div>{movie.Plot}</div>
